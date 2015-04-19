@@ -27,8 +27,9 @@ namespace Engine
             this.Piston4 = new Piston();
         }
 
-        public void StartEngine(Label enginespeedlabel, Label piston1label, Label piston2label, 
-            Label piston3label, Label piston4label, Label oillevellabel, Label petrollevellabel, Label enginestatelabel)
+        public void StartEngine(Label enginespeedlabel, Label piston1label, Label piston2label,
+            Label piston3label, Label piston4label, Label oillevellabel, Label petrollevellabel, Label enginestatelabel, Label piston1progresslabel,
+            Label piston2progresslabel, Label piston3progresslabel, Label piston4progresslabel)
         {
             this.CurrentState = "Starting...";
             this.EngineSpeed = 0;
@@ -49,16 +50,19 @@ namespace Engine
             this.Piston1.Direction = true;
 
             this.Piston2 = new Piston();
-            this.Piston2.PistonHeight = 50;
+            this.Piston2.PistonHeight = 40;
             this.Piston2.Direction = true;
+            this.Piston2.PistonProgress.Append("||||");
 
             this.Piston3 = new Piston();
-            this.Piston3.PistonHeight = 100;
+            this.Piston3.PistonHeight = 80;
             this.Piston3.Direction = false;
+            this.Piston3.PistonProgress.Append("||||||||");
 
             this.Piston4 = new Piston();
-            this.Piston4.PistonHeight = 50;
+            this.Piston4.PistonHeight = 20;
             this.Piston4.Direction = false;
+            this.Piston4.PistonProgress.Append("||");
 
             Random random = new Random();
 
@@ -74,10 +78,10 @@ namespace Engine
                     break;
                 }
 
-                this.Piston1.PistonLoop(piston1label);
-                this.Piston2.PistonLoop(piston2label);
-                this.Piston3.PistonLoop(piston3label);
-                this.Piston4.PistonLoop(piston4label);
+                this.Piston1.PistonLoop(piston1label, piston1progresslabel);
+                this.Piston2.PistonLoop(piston2label, piston2progresslabel);
+                this.Piston3.PistonLoop(piston3label, piston3progresslabel);
+                this.Piston4.PistonLoop(piston4label, piston4progresslabel);
 
             }
 
@@ -176,10 +180,10 @@ namespace Engine
                     petrollevellabel.Text = this.PetrolLevel.ToString();
                 }
 
-                this.Piston1.PistonLoop(piston1label);
-                this.Piston2.PistonLoop(piston2label);
-                this.Piston3.PistonLoop(piston3label);
-                this.Piston4.PistonLoop(piston4label);
+                this.Piston1.PistonLoop(piston1label, piston1progresslabel);
+                this.Piston2.PistonLoop(piston2label, piston2progresslabel);
+                this.Piston3.PistonLoop(piston3label, piston3progresslabel);
+                this.Piston4.PistonLoop(piston4label, piston4progresslabel);
 
             }
         }

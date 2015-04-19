@@ -6,3 +6,4 @@ C:\Users\petedarden\documents\visual studio 2013\Projects\Engine\Engine\bin\Debu
 C:\Users\petedarden\documents\visual studio 2013\Projects\Engine\Engine\obj\Debug\Engine.exe
 C:\Users\petedarden\documents\visual studio 2013\Projects\Engine\Engine\obj\Debug\Engine.pdb
 C:\Users\petedarden\documents\visual studio 2013\Projects\Engine\Engine\obj\Debug\Engine.EngineForm.resources
+C:\Users\petedarden\documents\visual studio 2013\Projects\Engine\Engine\obj\Debug\Engine.csprojResolveAssemblyReference.cache
