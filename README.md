@@ -8,5 +8,4 @@
 </figure>
 
 This Windows Form program simulates a small 4-cylinder engine. The program is in a simple state at the moment. I have lots of
-ideas to improve it by adding buttons for stop, accelerate, decelerate, add fuel, but first I need to do some more work on threads
-and background tasks...
+ideas to improve it by adding buttons for stop, accelerate, decelerate and add fuel, but first I need to do some more work on threads and background tasks...
