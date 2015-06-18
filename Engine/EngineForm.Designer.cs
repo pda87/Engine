@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ignitionButton = new System.Windows.Forms.Button();
             this.engineSpeedLabel = new System.Windows.Forms.Label();
             this.piston1Label = new System.Windows.Forms.Label();
@@ -48,6 +49,12 @@
             this.piston2ProgressLabel = new System.Windows.Forms.Label();
             this.piston3ProgressLabel = new System.Windows.Forms.Label();
             this.piston4ProgressLabel = new System.Windows.Forms.Label();
+            this.stopButton = new System.Windows.Forms.Button();
+            this.increaseSpeed = new System.Windows.Forms.Button();
+            this.decreaseSpeed = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.addPetrol = new System.Windows.Forms.Button();
+            this.addOil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ignitionButton
@@ -65,72 +72,72 @@
             this.engineSpeedLabel.AutoSize = true;
             this.engineSpeedLabel.Location = new System.Drawing.Point(221, 12);
             this.engineSpeedLabel.Name = "engineSpeedLabel";
-            this.engineSpeedLabel.Size = new System.Drawing.Size(35, 13);
+            this.engineSpeedLabel.Size = new System.Drawing.Size(96, 13);
             this.engineSpeedLabel.TabIndex = 1;
-            this.engineSpeedLabel.Text = "label1";
+            this.engineSpeedLabel.Text = "engineSpeedLabel";
             // 
             // piston1Label
             // 
             this.piston1Label.AutoSize = true;
             this.piston1Label.Location = new System.Drawing.Point(221, 93);
             this.piston1Label.Name = "piston1Label";
-            this.piston1Label.Size = new System.Drawing.Size(35, 13);
+            this.piston1Label.Size = new System.Drawing.Size(67, 13);
             this.piston1Label.TabIndex = 2;
-            this.piston1Label.Text = "label2";
+            this.piston1Label.Text = "piston1Label";
             // 
             // piston2Label
             // 
             this.piston2Label.AutoSize = true;
             this.piston2Label.Location = new System.Drawing.Point(221, 175);
             this.piston2Label.Name = "piston2Label";
-            this.piston2Label.Size = new System.Drawing.Size(35, 13);
+            this.piston2Label.Size = new System.Drawing.Size(41, 13);
             this.piston2Label.TabIndex = 3;
-            this.piston2Label.Text = "label3";
+            this.piston2Label.Text = "piston2";
             // 
             // piston3Label
             // 
             this.piston3Label.AutoSize = true;
             this.piston3Label.Location = new System.Drawing.Point(221, 257);
             this.piston3Label.Name = "piston3Label";
-            this.piston3Label.Size = new System.Drawing.Size(35, 13);
+            this.piston3Label.Size = new System.Drawing.Size(41, 13);
             this.piston3Label.TabIndex = 4;
-            this.piston3Label.Text = "label4";
+            this.piston3Label.Text = "piston3";
             // 
             // piston4Label
             // 
             this.piston4Label.AutoSize = true;
             this.piston4Label.Location = new System.Drawing.Point(221, 339);
             this.piston4Label.Name = "piston4Label";
-            this.piston4Label.Size = new System.Drawing.Size(35, 13);
+            this.piston4Label.Size = new System.Drawing.Size(41, 13);
             this.piston4Label.TabIndex = 5;
-            this.piston4Label.Text = "label5";
+            this.piston4Label.Text = "piston4";
             // 
             // oilLevelLabel
             // 
             this.oilLevelLabel.AutoSize = true;
             this.oilLevelLabel.Location = new System.Drawing.Point(418, 12);
             this.oilLevelLabel.Name = "oilLevelLabel";
-            this.oilLevelLabel.Size = new System.Drawing.Size(35, 13);
+            this.oilLevelLabel.Size = new System.Drawing.Size(69, 13);
             this.oilLevelLabel.TabIndex = 6;
-            this.oilLevelLabel.Text = "label6";
+            this.oilLevelLabel.Text = "oilLevelLabel";
             // 
             // petrolLevelLabel
             // 
             this.petrolLevelLabel.AutoSize = true;
             this.petrolLevelLabel.Location = new System.Drawing.Point(418, 37);
             this.petrolLevelLabel.Name = "petrolLevelLabel";
-            this.petrolLevelLabel.Size = new System.Drawing.Size(35, 13);
+            this.petrolLevelLabel.Size = new System.Drawing.Size(85, 13);
             this.petrolLevelLabel.TabIndex = 7;
-            this.petrolLevelLabel.Text = "label7";
+            this.petrolLevelLabel.Text = "petrolLevelLabel";
             // 
             // engineStateLabel
             // 
             this.engineStateLabel.AutoSize = true;
-            this.engineStateLabel.Location = new System.Drawing.Point(12, 71);
+            this.engineStateLabel.Location = new System.Drawing.Point(12, 72);
             this.engineStateLabel.Name = "engineStateLabel";
-            this.engineStateLabel.Size = new System.Drawing.Size(35, 13);
+            this.engineStateLabel.Size = new System.Drawing.Size(90, 13);
             this.engineStateLabel.TabIndex = 8;
-            this.engineStateLabel.Text = "label8";
+            this.engineStateLabel.Text = "engineStateLabel";
             // 
             // label1
             // 
@@ -201,9 +208,9 @@
             this.piston1ProgressLabel.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.piston1ProgressLabel.Location = new System.Drawing.Point(99, 37);
             this.piston1ProgressLabel.Name = "piston1ProgressLabel";
-            this.piston1ProgressLabel.Size = new System.Drawing.Size(160, 56);
+            this.piston1ProgressLabel.Size = new System.Drawing.Size(194, 56);
             this.piston1ProgressLabel.TabIndex = 16;
-            this.piston1ProgressLabel.Text = "label8";
+            this.piston1ProgressLabel.Text = "piston1";
             // 
             // piston2ProgressLabel
             // 
@@ -211,9 +218,9 @@
             this.piston2ProgressLabel.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.piston2ProgressLabel.Location = new System.Drawing.Point(99, 119);
             this.piston2ProgressLabel.Name = "piston2ProgressLabel";
-            this.piston2ProgressLabel.Size = new System.Drawing.Size(160, 56);
+            this.piston2ProgressLabel.Size = new System.Drawing.Size(194, 56);
             this.piston2ProgressLabel.TabIndex = 17;
-            this.piston2ProgressLabel.Text = "label9";
+            this.piston2ProgressLabel.Text = "piston2";
             // 
             // piston3ProgressLabel
             // 
@@ -221,9 +228,9 @@
             this.piston3ProgressLabel.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.piston3ProgressLabel.Location = new System.Drawing.Point(99, 201);
             this.piston3ProgressLabel.Name = "piston3ProgressLabel";
-            this.piston3ProgressLabel.Size = new System.Drawing.Size(187, 56);
+            this.piston3ProgressLabel.Size = new System.Drawing.Size(194, 56);
             this.piston3ProgressLabel.TabIndex = 18;
-            this.piston3ProgressLabel.Text = "label10";
+            this.piston3ProgressLabel.Text = "piston3";
             // 
             // piston4ProgressLabel
             // 
@@ -231,15 +238,75 @@
             this.piston4ProgressLabel.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.piston4ProgressLabel.Location = new System.Drawing.Point(99, 283);
             this.piston4ProgressLabel.Name = "piston4ProgressLabel";
-            this.piston4ProgressLabel.Size = new System.Drawing.Size(184, 56);
+            this.piston4ProgressLabel.Size = new System.Drawing.Size(194, 56);
             this.piston4ProgressLabel.TabIndex = 19;
-            this.piston4ProgressLabel.Text = "label11";
+            this.piston4ProgressLabel.Text = "piston4";
+            // 
+            // stopButton
+            // 
+            this.stopButton.Location = new System.Drawing.Point(12, 118);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(75, 23);
+            this.stopButton.TabIndex = 20;
+            this.stopButton.Text = "Stop Button";
+            this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            // 
+            // increaseSpeed
+            // 
+            this.increaseSpeed.Location = new System.Drawing.Point(315, 93);
+            this.increaseSpeed.Name = "increaseSpeed";
+            this.increaseSpeed.Size = new System.Drawing.Size(138, 23);
+            this.increaseSpeed.TabIndex = 21;
+            this.increaseSpeed.Text = "Increase Speed";
+            this.increaseSpeed.UseVisualStyleBackColor = true;
+            this.increaseSpeed.Click += new System.EventHandler(this.increaseSpeed_Click);
+            // 
+            // decreaseSpeed
+            // 
+            this.decreaseSpeed.Location = new System.Drawing.Point(315, 160);
+            this.decreaseSpeed.Name = "decreaseSpeed";
+            this.decreaseSpeed.Size = new System.Drawing.Size(138, 23);
+            this.decreaseSpeed.TabIndex = 22;
+            this.decreaseSpeed.Text = "Decrease Speed";
+            this.decreaseSpeed.UseVisualStyleBackColor = true;
+            this.decreaseSpeed.Click += new System.EventHandler(this.decreaseSpeed_Click);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 63;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // addPetrol
+            // 
+            this.addPetrol.Location = new System.Drawing.Point(315, 227);
+            this.addPetrol.Name = "addPetrol";
+            this.addPetrol.Size = new System.Drawing.Size(138, 23);
+            this.addPetrol.TabIndex = 23;
+            this.addPetrol.Text = "Add Petrol";
+            this.addPetrol.UseVisualStyleBackColor = true;
+            this.addPetrol.Click += new System.EventHandler(this.addPetrol_Click);
+            // 
+            // addOil
+            // 
+            this.addOil.Location = new System.Drawing.Point(315, 294);
+            this.addOil.Name = "addOil";
+            this.addOil.Size = new System.Drawing.Size(138, 23);
+            this.addOil.TabIndex = 24;
+            this.addOil.Text = "Add Oil";
+            this.addOil.UseVisualStyleBackColor = true;
+            this.addOil.Click += new System.EventHandler(this.addOil_Click);
             // 
             // EngineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 369);
+            this.Controls.Add(this.addOil);
+            this.Controls.Add(this.addPetrol);
+            this.Controls.Add(this.decreaseSpeed);
+            this.Controls.Add(this.increaseSpeed);
+            this.Controls.Add(this.stopButton);
             this.Controls.Add(this.piston4ProgressLabel);
             this.Controls.Add(this.piston3ProgressLabel);
             this.Controls.Add(this.piston2ProgressLabel);
@@ -269,7 +336,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button ignitionButton;
         private System.Windows.Forms.Label engineSpeedLabel;
         private System.Windows.Forms.Label piston1Label;
         private System.Windows.Forms.Label piston2Label;
@@ -289,6 +355,13 @@
         private System.Windows.Forms.Label piston2ProgressLabel;
         private System.Windows.Forms.Label piston3ProgressLabel;
         private System.Windows.Forms.Label piston4ProgressLabel;
+        private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Button increaseSpeed;
+        private System.Windows.Forms.Button decreaseSpeed;
+        private System.Windows.Forms.Timer timer;
+        internal System.Windows.Forms.Button ignitionButton;
+        private System.Windows.Forms.Button addPetrol;
+        private System.Windows.Forms.Button addOil;
     }
 }
 

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Engine
 {
@@ -19,19 +18,13 @@ namespace Engine
             this.PistonProgress = new StringBuilder();
         }
 
-
-        public void PistonLoop(Label pistontextlabel, Label pistonprogresslabel)
+        public void PistonLoop()
         {
-            
+
             if (this.Direction == true)
             {
-                pistontextlabel.Text = this.PistonHeight.ToString();
-                Thread.Sleep(40);
                 this.PistonHeight = this.PistonHeight + 10;
                 this.PistonProgress.Append("|");
-                pistonprogresslabel.Text = this.PistonProgress.ToString();
-                pistonprogresslabel.Refresh();
-                pistontextlabel.Refresh();
 
                 if (this.PistonHeight == 100)
                 {
@@ -42,10 +35,8 @@ namespace Engine
 
             if (this.Direction == false)
             {
-                pistontextlabel.Text = this.PistonHeight.ToString();
-                Thread.Sleep(40);
                 this.PistonHeight = this.PistonHeight - 10;
-                
+
 
                 if (this.PistonHeight == 0)
                 {
@@ -58,9 +49,6 @@ namespace Engine
                     this.PistonProgress.Remove(this.PistonProgress.Length - 1, 1);
                 }
 
-                pistonprogresslabel.Text = this.PistonProgress.ToString();
-                pistonprogresslabel.Refresh();
-                pistontextlabel.Refresh();
             }
         }
     }
